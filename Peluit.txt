@@ -1,0 +1,74 @@
+Pebble bed Peluit
+c Teras reaktor silinder
+500  66 -0.000166 -90 70 -92                 imp:n=1                        $atas teras
+300  0 -60 -70 80                            imp:n=1              fill=6    $teras silinder
+400  66 -0.000166 -21 22 23 -24 25 -26       imp:n=1  u=6   lat=1 fill=3    $latticepebblefuel
+100  55  -1.75 -99                           imp:n=1  u=3         fill=100  $Pebble fuel
+990  55 -1.75  99 -100                       imp:n=1  u=3                   $Graphite shell
+991  66 -0.000166 100                        imp:n=1  u=3                   $Helium
+200  55 -1.75  -12 13 14 -15 17 -18          imp:n=1  u=100 lat=1 fill=1    $lat1 kubus
+11   235  -10.97      -10                    imp:n=1  u=1                   $UO2 Kernel
+12   11  -1.05   10  -20                     imp:n=1  u=1                   $Buffer             
+13   22  -1.9   20  -30                      imp:n=1  u=1                   $IPyC
+14   33  -3.18       30  -40                 imp:n=1  u=1                   $SiC
+15   22  -1.9   40  -50                      imp:n=1  u=1                   $OPyC
+16   55  -1.75  50                           imp:n=1  u=1                   $Graphite matrix
+600  0 -93 -80 94                            imp:n=1              fill=5    $kerucut
+700  0 -94 95 -96                            imp:n=1              fill=5    $silinder bawah
+800  55 -1.75 -97                            imp:n=1  u=4                   $dummy fuel
+801  66 -0.000166 97                         imp:n=1  u=4
+900  66 -0.000166 -31 32 33 -34 35 -36       imp:n=1  u=5   lat=1 fill=4    $lattice dummy fuel
+999  0 #500 #300 #600 #700 #800 #900         imp:n=0                        $daerah mati
+
+c teras reaktor
+90 cz 90.0
+92 pz 221.818
+60 cz 90.0
+70 pz 197.0
+80 pz 0.0
+93 kz -50.182 3.216541
+94 pz -36.946
+95 pz -258.182
+96 cz 24
+97 so 6.0
+c batas kisi dummy
+31 py 6.5
+32 py -6.5
+33 px -6.5
+34 px 6.5
+35 pz -6.5
+36 pz 6.5
+c batas kisi pebble
+21  py  6.5
+22  py -6.5
+23  px -6.5
+24  px  6.5
+25  pz -6.5
+26  pz  6.5
+99  so  5.5
+100 so  6.0
+c batas kisi triso
+12  py  0.085
+13  py -0.085
+14  px -0.085
+15  px  0.085
+17  pz -0.085
+18  pz  0.085
+c batas triso
+10  so  0.05   $UO2 Kernel
+20  so  0.059   $Buffer
+30  so  0.063   $IPyC
+40  so  0.0665  $SiC
+50  so  0.0705  $OPyC 
+
+c material card
+m235  8016 -0.048899 92234 -0.000007 92235 -0.244457 92236 -0.000003 
+     92238 -0.202715     $UO2 kernel
+m11   6000   -1.0535                     $carbon buffer
+m22   6000   -1.906333                   $Inner PyC
+m33   14000  -0.048212  6000  -0.048212  $SiC
+m55   6000   -0.085238                   $Graphite
+m66   2004   0.000025                    $Helium
+c
+kcode 10000 1.0 50 250
+ksrc 0 0 0

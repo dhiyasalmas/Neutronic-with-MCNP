@@ -1,0 +1,37 @@
+Latihan lattice HTR-10, enrichment U235 17%
+100 0  -99                                 imp:n=1             fill=100 
+200 0  -12   13 14 -15 17 -18              imp:n=1 u=100 lat=1 fill=10
+c 30  30 -3.0 -11               imp:n=1 u=10
+c 40  40 -4.0  11               imp:n=1 u=10
+1    235  -0.2342 -10                       imp:n=1 u=10  $UO2 Kernel
+2    11   -1.1     10  -20                  imp:n=1 u=10  $Buffer             
+3    22   -1.9     20  -30                  imp:n=1 u=10  $IPyC
+4    33   -3.18    30  -40                  imp:n=1 u=10  $SiC
+5    22   -1.9     40  -50                  imp:n=1 u=10  $OPyC
+6    55   -10.4    50                       imp:n=0 u=10 $Graphite matrix
+9    55   -10.4    99  -999                 imp:n=0       $Graphite shell
+990   0             999                      imp:n=0       $Vaccuum
+
+12  py  0.05
+13  py -0.05
+14  px -0.05
+15  px  0.05
+17  pz -0.05
+18  pz  0.05
+c 11 so 1.5
+10  so  0.021   $UO2 Kernel, 210um=0.021cm
+20  so  0.03    $Buffer, 210um+90um=0.03cm
+30  so  0.034   $IPyC, 210um+90um+40um=0.034cm
+40  so  0.0375  $SiC, 210um+90um+40um+35um=0.0375cm
+50  so  0.0405  $OPyC, 210um+90um+40um+35um+40um=0.0405cm
+99  so  1.5 
+999 so  2
+
+c m40 1000.60c 2 8000.60c 1
+c m30 1000.60c 2 8000.60c 1
+m235  92235  -0.04031  92238  -0.1943  8016   -0.118533     $UO2 kernel
+m11   6000   -0.999999                   $carbon buffer (Activated)
+m22   6000   -1.999999                   $Inner PyC
+m33   14000  -0.700453  6000  -0.299547  $SiC
+m44   6000   -1.999999                   $Outer PyC
+m55   6000   -0.999999                   $Graphite

@@ -1,0 +1,98 @@
+Pebble bed core HTR-10
+500  6 -0.000166 -90 70 -92             imp:n=1  $atas teras
+300  0 -60 -70 80                       imp:n=1  fill=6 $teras silinder
+600  0 -93 -80 94                         imp:n=1  fill=5 $kerucut
+700  0 -94 95 -96                         imp:n=1 fill=5  $silinder bawah
+800  5 -1.73 -97                        imp:n=1  u=4 $dummy fuel
+900  6 -0.000166 -31 32 33 -34 35 -36   imp:n=1  u=5 lat=1 fill=4 $lattice dummy fuel
+910    5  -1.73 -41  43 -42 #911                    imp:n=1 $atas reflektor
+911    0  -81  83 -82                    imp:n=1 $shielding atas
+920    5  -1.73 -41  45 -44 -46 47 #910             imp:n=1 $active core kanan reflektor
+921    0  -81  85 -84 -86 87 #961         imp:n=1 $shielding kanan
+930    5  -1.73 -41  48 -49 -46 47 #910             imp:n=1 $active core kiri reflektor
+931    0  -81  88 -89 -86 87 #971           imp:n=1 $shielding kiri
+960    5  -1.73 -41  45 -44 -61 62  #961            imp:n=1 $bawah reflektor kanan
+970    5  -1.73 -41  48 -49 -61 62  #971            imp:n=1 $bawah reflektor kiri
+971    0  -81  75 -76 -73 74              imp:n=1 $shield bawah kiri
+999  0 #500 #300 #600 #700 #800 #900 #910 #911 #920 #921 #930 #931 #960 #961 
+     #970 #971 #950 #940 imp:n=0     $daerah mati
+
+90 cz 90.0
+92 pz 221.818
+60 cz 90.0
+70 pz 197.0
+80 pz 0.0
+93 kz -50.182 3.216541
+94 pz -36.946
+95 pz -258.182
+96 cz 24
+97 so 3.0
+41 cz 305
+42 pz 305
+43 pz 222
+44 px 480
+45 px 90
+46 pz 305
+47 pz 0
+48 px -480
+49 px -90
+61 pz 0
+62 pz -258.182
+63 kz -50.182 3.00
+64 px 90
+65 px 25
+66 px -90
+67 px -25
+68 px 90
+69 px 25
+81 cz 349.414
+82 pz 349.414
+83 pz 305
+84 px 500
+85 px 305
+86 pz 305
+87 pz -258.182
+88 px -500
+89 px -305
+71 px 480
+72 px 25
+73 pz -160
+74 pz -190
+75 px -480
+76 px -25
+31 py 3.0
+32 py -3.0
+33 px -3.0
+34 px 3.0
+35 pz -3.0
+36 pz 3.0
+21  py  3.0
+22  py -3.0
+23  px -3.0
+24  px  3.0
+25  pz -3.0
+26  pz  3.0
+99  so  2.5
+100 so  3.0
+12  py  0.0994
+13  py -0.0994
+14  px -0.0994
+15  px  0.0994
+17  pz -0.0994
+18  pz  0.0994
+10  so  0.025   $UO2 Kernel
+20  so  0.034   $Buffer
+30  so  0.038   $IPyC
+40  so  0.0415  $SiC
+50  so  0.0455  $OPyC 
+
+m1  8016 -0.048899 92234 -0.000007 92235 -0.244457 92236 -0.000003 
+     92238 -0.202715     $UO2 kernel
+m2   6000   -1.0535                   $carbon buffer (Activated)
+m3   6000   -1.906333                   $Inner PyC
+m4   14000  -0.048212  6000  -0.048212  $SiC
+m5   6000   -0.085238                   $Graphite
+m6   2004   0.000025                    $Helium
+c
+kcode 10000 1.0 50 250
+ksrc 0 0 0
